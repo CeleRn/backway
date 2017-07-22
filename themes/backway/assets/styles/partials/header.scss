@@ -1,0 +1,109 @@
+.top-panel {
+    @extend .container;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Roboto';
+}
+.top-panel-link {
+    height: 36px;
+    padding: 3px 16px;
+    display: flex;
+    color: #626262;
+    align-items: center;
+    text-decoration: none;
+    
+    &:hover, &:focus {
+        background-color: rgba(0,0,0,0.05);
+    }
+    &__icon {
+        width: 30px;
+        height: 20px;
+        fill: #aaa;
+    }
+    &__text {
+        font-size: .85em;
+        
+        line-height: 24px;
+        font-weight: 300;
+    }
+}
+
+.middle-panel {
+    @extend .box-block;
+    @extend .container;
+    min-height: 150px;
+    display: flex;
+}
+
+.logo {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    &__image {
+        height: 80px;
+        width: 176px;
+    }
+}
+
+.menu {
+    flex: 0 0 80%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: 1.2em;
+    flex-wrap: wrap;
+    &__link {
+        @extend .text-serif;
+        padding: 0 1.5em;
+
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        color: #323232;
+        text-decoration: none;
+        &:hover, &:focus {
+            background-color: #B5FFB5;
+            text-shadow: -1px 1px 2px rgba(0,0,0,0.05);
+        }
+    }
+}
+
+.bottom-panel {
+    @extend .box-block;
+    @extend .container;
+    position: relative;
+    margin-top: 15px;
+    min-height: 40px;
+    .call-to-action-link {
+        position: absolute;
+        right: $container-padding;
+        top: 0;
+    }
+}
+.call-to-action-link {
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $accent-color;
+    color: #fff;
+    text-shadow: $block-shadow;
+    &:hover, &:focus {
+        background-color: darken($accent-color, 5%);
+    }
+}
+
+.submenu {
+    display: flex;
+    &__link {
+        padding: 12px 20px;
+        color: #626262;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover, &:focus {
+            background-color: rgba(0,0,0,0.05);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+body {
+    background-color: $body-bg;
+    color: $body-color;
+    font-family: $font-sans;
+    font-size: 14px;
+}
+.container {
+    padding: 0 $container-padding;
+}
+div {
+    box-sizing: border-box;
+}
+.box-block {
+    background-color: $block-bg;
+    box-shadow: $block-shadow;
+}
+.text-serif {
+    font-family: $font-serif;
+}

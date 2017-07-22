@@ -1,0 +1,10 @@
+menu:
+  - alias: recovery
+    name: Обучение
+    url: /recovery/
+  - alias: consult
+    name: Консултации
+    url: /consult/
+  - alias: price
+    name: Цены
+    url: /price/

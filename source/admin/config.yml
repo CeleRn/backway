@@ -1,0 +1,82 @@
+backend:
+  name: github
+  repo: ArtMusicPro/artmusicpro.ru # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+media_folder: "source/assets/images/uploads" # Folder where user uploaded files should go
+public_folder: "assets/images/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "cource" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Курс"
+    folder: "/source/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template
+    fields: # The fields each document in this collection have
+      - {label: "Шаблон", name: "layout", widget: "hidden", default: "cource"}
+      - {label: "Директория", name: "section", widget: "hidden", default: "/education/courses"}
+      - {label: "Хлебные крошки", name: "breadcrumbs", widget: "hidden", default: "[{name: Обучение, url: /education/},{name: Курсы, url: /education/courses/}]"}
+      - {label: "Текущая страница в хлебных крошек", name: "breadcrumbCurrent", widget: "boolean", default: "true"}
+      - {label: "Краткое название курса", name: "title", widget: "string"}
+      - {label: "Полное название курса", name: "longtitle", widget: "string"}
+      - {label: "в Химках", name: "subtitle", widget: "boolean"}
+      - {label: "Главная картинка курса", name: "banner", widget: "image", required: false}
+      - {label: "Стоимость курса", name: "price", widget: "string"}
+      - {label: "Подробное описание стоимости", name: "more-price", widget: "markdown"}
+      - {label: "Количество занятий курса", name: "number-lesson", widget: "number"}
+      - {label: "Продолжительность в месяцах", name: "month", widget: "number"}
+      - {label: "Состав слушателей", name: "members", widget: "list"}
+      - {label: "Место занятий", name: "place", widget: "list"}
+      - {label: "Возраст слушателей", name: "age", widget: "string"}
+      - {label: "Программа курса", name: "program", widget: "markdown"}
+      - {label: "Чему Вы научитесь", name: "result", widget: "markdown"}
+      - {label: "Описание курса", name: "content", widget: "markdown"}
+      - label: "SEO параметры страницы"
+        name: "seo"
+        widget: "object"
+        fields:
+          - {label: "Тег Title", name: "title", widget: "string"}
+          - {label: "Тег h1", name: "h1", widget: "string"}
+          - {label: "Тег Keywords", name: "keywords", widget: "string"}
+          - {label: "Тег Description", name: "description", widget: "string"}
+  - name: "types-of-guitars" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Виды гитар"
+    folder: "/source/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template
+    fields: # The fields each document in this collection have
+      - {label: "Шаблон", name: "layout", widget: "hidden", default: "default"}
+      - {label: "Директория", name: "section", widget: "hidden", default: "/about-guitars/types-of-guitars"}
+      - {label: "Название вида", name: "title", widget: "string"}
+      - {label: "Главная картинка", name: "banner", widget: "image", required: false}
+      - {label: "Описание", name: "description", widget: "markdown"}
+  - name: "data"
+    label: "Данные"
+    files:
+      - name: "company"
+        label: "Организация"
+        file: "source/_data/company.yml"
+        fields:
+          - {label: "Название", name: "name", widget: "string"}
+          - {label: "Логотип", name: "image", widget: "image", media_folder: "themes/artmusicpro/assets/images/"}
+          - {label: "Номер телефона", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Город", name: "city", widget: "string"}
+          - {label: "Адрес", name: "address", widget: "string"}
+      - name: "menu"
+        label: "Главное меню"
+        file: "source/_data/menunew.yml"
+        fields:
+          - label: "Пункты меню"
+            name: "menu"
+            widget: "list"
+            fields:
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "URL адрес", name: "url", widget: "string"}
+              - {label: "Псевдоним", name: "alias", widget: "string"}
+              - label: "Подпункты меню"
+                name: "children"
+                widget: "list"
+                fields:
+                  - {label: "Название", name: "name", widget: "string"}
+                  - {label: "URL адрес", name: "url", widget: "string"}
