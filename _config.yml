@@ -82,8 +82,7 @@ deploy:
 
 browsersync:
   logLevel: "warn"
-  ReloadDelay: 4000
-  reloadDebounce: 100
+  ReloadDelay: 2000
   ghostMode:
     scroll: true
   #proxy:  "artmusicpro-celern.c9users.io:8082"
