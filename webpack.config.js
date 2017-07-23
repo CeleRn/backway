@@ -126,7 +126,7 @@ module.exports = {
         //     name: "commons",
         //     minChunks: 2
         // }),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new SpriteLoaderPlugin()
     ],
     // watch: NODE_ENV == 'development',
@@ -140,12 +140,16 @@ module.exports = {
 
     // },
     devServer: {
-        contentBase: __dirname + "/public/",
+        contentBase: path.join(__dirname, "public"),
         // inline: true,
-        // port: 8080,
-        // hot: true
+        host: 'localhost',
+        port: 9000,
+        // hot: true,
+        // proxy: {
+        //     "/": "http://localhost:8081"
+        // }
         proxy: {
-            "/": "http://localhost:8081"
+            "/": "http://localhost:4000"
         }
     }
 };

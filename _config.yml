@@ -82,10 +82,8 @@ deploy:
 
 browsersync:
   logLevel: "warn"
-  ReloadDelay: 2000
-  ghostMode:
-    scroll: true
+  reloadDelay: 1000
   #proxy:  "artmusicpro-celern.c9users.io:8082"
-  port: 8082
-  script:
-    domain: "https://backway-celern.c9users.io:8082"
+  # port: 8082
+  # script:
+  #   domain: "https://backway-celern.c9users.io:8082"

@@ -163,7 +163,10 @@
         margin-top: 30px;
         padding: 15px;
         &_25 {
-            flex: 0 0 20%;
+            flex: 0 0 18%;
+        }
+        &_40 {
+            flex: 0 0 32%;
         }
         &_50 {
             flex: 0 0 45%;
@@ -216,7 +219,7 @@
 }
 
 .relink-tile {
-    flex: 0 0 33%;
+    flex: 0 0 30%;
     margin-top: 15px;
     text-align: center;
     &__link {
@@ -224,7 +227,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 25px;
+        padding: 15px;
         text-decoration: none;
         color: #888;
         &:hover, &:focus {
@@ -243,6 +246,6 @@
     }
     &__title {
         
-        font-size: .9em;
+        font-size: .8em;
     }
 }

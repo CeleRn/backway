@@ -38,6 +38,12 @@ require('./icons/files/images.svg');
 require('./icons/files/musics.svg');
 require('./icons/files/videos.svg');
 
+// Иконки операционных систем
+require('./icons/systems/apple.svg');
+require('./icons/systems/windows.svg');
+require('./icons/systems/linux.svg');
+require('./icons/systems/android.svg');
+
 
 
 // Логотипы производителей
