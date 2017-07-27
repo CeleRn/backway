@@ -1,5 +1,4 @@
 // Загрузка основных стилей
-require('normalize.css/normalize.css');
 require("./styles/commons.scss");
 
 // Логотип

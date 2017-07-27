@@ -1,6 +1,6 @@
 .breadcrumb-block {
-    padding: 5px 15px;
-    margin-top: 30px;
+    margin-top: 35px;
+    margin-bottom: 15px;
     & + .main {
         margin-top: 0px;
     }
@@ -8,8 +8,8 @@
 
 .breadcrumb {
     font-size: .8em;
+    padding: 0 15px;
     margin: 0;
-    padding-left: 0;
     list-style: none;
     display: flex;
     &__item {

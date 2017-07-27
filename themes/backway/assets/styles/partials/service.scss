@@ -1,41 +1,89 @@
 .service {
-    @extend .box-block;
+    @extend .container;
     padding: 15px;
     min-height: 416px;
+    &__info {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
     &__description {
+        flex: 0 0 100%;
+        
+        color: #888;
+        order: 1;
+    }
+    &__list-desc {
+        flex: 0 0 29%;
+        order: 2;
+        & + .service__description {
+            flex: 0 0 69%;
+        }
+    }
+    .main-title {
+        padding: 25px 15px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+.description {
+    @extend .box-block;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 280px;
+    &__text {
+        padding: 15px;
         font-size: 16px;
         line-height: 1.4em;
-        color: #888;
     }
-
+    &__image    {
+        flex: 0 0 280px;
+        background-image: url('../images/uploads/hdd.jpg');
+        background-position: center center;
+        background-repeat: no-repeat no-repeat;
+        background-size: auto 100%;
+    }
 }
-
+.list-desc {
+    
+    padding: 15px;
+    &__title {
+        color: #626262;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #626262;
+    }
+}
+.content-block {
+    @extend .box-block;
+    padding: 1em;
+    min-height: 416px;
+}
 .price {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
     &__cost {
-        flex: 0 0 70%;
-        max-width: 70%;
-        background-color: $main-color;
+        @extend .box-block;
+        flex: 0 0 69%;
         padding: 15px;
-        margin-left: -15px;
     }
     &__payment {
-        flex: 0 0 30%;
-        max-width: 30%;
+        flex: 0 0 29%;
         padding: 15px;
-        margin-right: -15px;
     }
 }
 .cost {
     &__title {
-        color: #fff;
+        color: #323232;
         font-weight: 700;
         text-transform: uppercase;
         margin: 0;
         padding-bottom: 5px;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #888;
     }
     &__text {
         color: #fff;
@@ -45,7 +93,20 @@
         margin-bottom: 0;
     }
 }
-
+.cost-list {
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 4px;
+    &__text {
+        flex: 0 0 80%;
+        
+    }
+    &__price {
+        flex: 0 0 20%;
+        text-align: right;
+        margin-left: 0;
+    }
+}
 .payment {
     &__title {
         color: #626262;
@@ -65,8 +126,10 @@
 
 .call-to-action {
     margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
     &__block {
         flex: 0 0 30%;
         @extend .box-block;
@@ -163,13 +226,16 @@
         margin-top: 30px;
         padding: 15px;
         &_25 {
-            flex: 0 0 18%;
+            flex: 0 0 24%;
         }
-        &_40 {
+        &_33 {
             flex: 0 0 32%;
         }
+        &_40 {
+            flex: 0 0 39%;
+        }
         &_50 {
-            flex: 0 0 45%;
+            flex: 0 0 49%;
         }
     }
     &__title {
@@ -179,6 +245,13 @@
         margin: 0;
         padding-bottom: 5px;
         border-bottom: 1px solid #dedede;
+        
+    }
+    &__description {
+        font-size: .95em;
+        margin-top: 15px;
+        color: #888;
+        line-height: 1.4em;
     }
 }
 .relink-list {

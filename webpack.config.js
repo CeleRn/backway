@@ -74,7 +74,10 @@ module.exports = {
                     }, {
                         loader: 'sass-loader',
                         options: {
-                            includePaths: [path.resolve(__dirname, 'node_modules'),]
+                            includePaths: [
+                                path.resolve(__dirname, 'node_modules'),
+                                path.resolve(__dirname, 'public', 'assets', 'css')
+                            ]
                         }
                     }]
                 })
