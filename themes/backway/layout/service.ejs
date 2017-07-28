@@ -1,5 +1,12 @@
 <div class="service" itemscope itemtype="http://schema.org/Service">
   <h1 class="main-title box-block" itemprop="name">Восстановление данных с жесткого диска <small class="main-title__small">в Москве и Московской области</small></h1>
+  
+  <span itemprop="areaServed" itemscope itemtype="http://schema.org/City">
+    <meta itemprop="name" content="Москва" />
+  </span>
+  <span itemprop="areaServed" itemscope itemtype="http://schema.org/State">
+    <meta itemprop="name" content="Московская область" />
+  </span>
   <meta itemprop="serviceType" content="Recovery data" />
   <div class="service__info">
     <div class="service__list-desc list-desc">
@@ -29,40 +36,53 @@
   </div>
   
   <div class="service__price price">
-    <div class="price__cost cost">
-      <h2 class="cost__title">Стоимость</h2>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Логические неисправности (жесткий диск физически исправен)</dt>
-        <dd class="cost-list__price">от 6000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Ошибки в служебной зоне накопителя</dt>
-        <dd class="cost-list__price">от 6000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Неисправность контроллера</dt>
-        <dd class="cost-list__price">от 6000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Залипание магнитных головок</dt>
-        <dd class="cost-list__price">от 9000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Неисправность блока магнитных головок</dt>
-        <dd class="cost-list__price">от 12000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Клин подшипника или обрыв обмоток двигателя</dt>
-        <dd class="cost-list__price">от 12000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Нечитаемые сектора, небольшие повреждения поверхности</dt>
-        <dd class="cost-list__price">от 9000 &#8381;</dd>
-      </dl>
-      <dl class="cost-list">
-        <dt class="cost-list__text">Значительные повреждения поверхности, царапины, запилы</dt>
-        <dd class="cost-list__price">от 30000 &#8381;</dd>
-      </dl>
+    <div class="price__cost cost" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+      <meta itemprop="lowPrice" content="3000" />
+      <meta itemprop="priceCurrency" content="RUB" />
+      <h2 class="cost__title">Стоимость восстановления данных</h2>
+      <div class="cost-list" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с логическими неисправностями" />
+        <span itemprop="areaServed" itemscope itemtype="http://schema.org/City">
+          <meta itemprop="name" content="Москва" />
+        </span>
+        <div class="cost-list__text">Логические неисправности (жесткий диск физически исправен)</div>
+        <div class="cost-list__price">от <span itemprop="lowPrice">3000</span> <span itemprop="priceCurrency" content="RUB">&#8381;</span></div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с ошибками в служебной зоне" />
+        <span itemprop="areaServed" itemscope itemtype="http://schema.org/City">
+          <meta itemprop="name" content="Москва" />
+        </span>
+        <div class="cost-list__text">Ошибки в служебной зоне накопителя</div>
+        <div class="cost-list__price">от <span itemprop="lowPrice">6000</span> <span itemprop="priceCurrency" content="RUB">&#8381;</span></div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с неисправным контроллером" />
+        <div class="cost-list__text">Неисправность контроллера</div>
+        <div class="cost-list__price">от <span itemprop="lowPrice">6000</span> <span itemprop="priceCurrency" content="RUB">&#8381;</span></div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с залипшими магнитными головками" />
+        <div class="cost-list__text">Залипание магнитных головок</div>
+        <div class="cost-list__price">от <span itemprop="lowPrice">9000</span> <span itemprop="priceCurrency" content="RUB">&#8381;</span></div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с неисправным блоком магнитных головок" />
+        <div class="cost-list__text">Неисправность блока магнитных головок</div>
+        <div class="cost-list__price">от <span itemprop="lowPrice">12000</span> <span itemprop="priceCurrency" content="RUB">&#8381;</span></div>
+      </div>
+      <div class="cost-list">
+        <div class="cost-list__text">Клин подшипника или обрыв обмоток двигателя</div>
+        <div class="cost-list__price">от 12000 &#8381;</div>
+      </div>
+      <div class="cost-list">
+        <div class="cost-list__text">Нечитаемые сектора, небольшие повреждения поверхности</div>
+        <div class="cost-list__price">от 9000 &#8381;</div>
+      </div>
+      <div class="cost-list">
+        <div class="cost-list__text">Значительные повреждения поверхности, царапины, запилы</div>
+        <div class="cost-list__price">от 30000 &#8381;</div>
+      </div>
     </div>
     <div class="price__payment payment">
       <h2 class="payment__title">Способы оплаты</h2>

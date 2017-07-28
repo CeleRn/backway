@@ -1,0 +1,3 @@
+---
+layout: vendors-list
+---
